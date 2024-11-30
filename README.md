@@ -1,6 +1,8 @@
 # FINAL REPOSITORY PROJECT 
 ### Lab 3 ###
-
+```bash
+This lab invovled perfoming a BLAST search on the query sequence to identify homologs across different species. The resulting homolog sequences will be aligned in subsequent labs.  
+```
 Firstly, uncompress the Proteome file 
 ``` bash
 gunzip proteomes/*.gz
@@ -34,6 +36,9 @@ Find the number of paralogs in each species
 grep -o -E "^[A-Z]\.[a-z]+" solute_carrier.blastp.detail.filtered.out  | sort | uniq -c
 ```
 ### Lab 4 ###
+```bash
+This lab focused on aligning the homolog sequences of the query sequence from lab 3 via programs such as MUSCLE and alignbuddy. 
+```
 Create a working directory for solute carrier gene family in lab 4 
 ```bash
 mkdir ~/lab04-$MYGIT/mygene
@@ -79,6 +84,9 @@ Now, calculate the average percent identity using the alignbuddy program
      END{ print(100*sum/num) } '
 ```
 ### Lab 5 ###
+```bash
+This lab focused on constructing a gene family phylogeny tree via IQTREE. The program first calculates the optimal model for amino acid substitution and frequency. Following that, it conducts tree search simultaneously estimating branch lengths. It is important to note that the output is an unrooted tree; however, to understand the phylogenetic relationship, the tree was rooted at the midpoint.  
+```
 Firstly, create a working directory
 ```bash 
 mkdir ~/lab05-$MYGIT/mygene
@@ -118,6 +126,9 @@ nw_order -c n ~/lab05-$MYGIT/mygene/solutecarrier.homologsf.al.mid.treefile | nw
 convert ~/lab05-$MYGIT/mygene/solutecarrier.homologsf.al.midCl.treefile.svg ~/lab05-$MYGIT/mygene/solutecarrier.homologsf.al.midCl.treefile.pdf
 ```
 ### Lab 6 ###
+```bash
+This lab focused on a preforming a reconciliation between the species and gene tree. Once the reconciliation was preformed, the resulting tree was saved as a pdf. This tree represented one of the evolutionary hypotheses regarding the makeup of the solute carrier gene. 
+```
 First, perform a gene and species tree reconciliation with the help of a software pacakage known as Notung. This command also saves the output as a png 
 ```bash
 java -jar ~/tools/Notung-3.0_24-beta/Notung-3.0_24-beta.jar -s ~/lab05-$MYGIT/species.tre -g ~/lab06-$MYGIT/mygene/solutecarrier.homologsf.al.mid.treefile --reconcile --speciestag prefix --savepng --events --outputdir ~/lab06-$MYGIT/globins/
@@ -135,6 +146,9 @@ Finally convert svg graphic into a pdf to view the contents a bit easier
 convert  -density 150 ~/lab06-$MYGIT/mygene/solutecarrier.homologsf.al.mid.treefile.rec.svg ~/lab06-$MYGIT/mygene/solutecarrier.homologsf.al.mid.treefile.rec.pdf
 ```
 ### Lab 8 ###
+```bash
+An RPS-BLAST search was conducted to identify protein families (Pfam), which are conserved protein domains across various species. After the identification of the protein domains, they were plotted next to a phylogenetic tree to provide a more comprehensive evolutionary perspective.
+```
 Create a working directory and navigate to it 
 ```bash
 mkdir ~/lab08-$MYGIT/mygene && cd ~/lab08-$MYGIT/mygene
