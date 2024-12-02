@@ -85,7 +85,7 @@ Now, calculate the average percent identity using the alignbuddy program
 ```
 ### Lab 5 ###
 ```bash
-This lab focused on constructing a gene family phylogeny tree via IQTREE. The program first calculates the optimal model for amino acid substitution and frequency. Following that, it conducts tree search simultaneously estimating branch lengths. It is important to note that the output is an unrooted tree; however, to understand the phylogenetic relationship, the tree was rooted at the midpoint.  
+This lab focused on constructing a gene family phylogeny tree via IQTREE. The program first calculated the optimal model for amino acid substitution and frequency. It then conducted a tree search simultaneously estimating the branch lengths. Following that, the output was an unrooted gene family phylogeny which was later rooted at the midpoint.   
 ```
 Firstly, create a working directory
 ```bash 
